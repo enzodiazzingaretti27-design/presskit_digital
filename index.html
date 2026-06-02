@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -57,7 +58,7 @@
         <a href="#live" class="mobile-nav__link" data-i18n="nav.live">Live</a>
         <a href="#contact" class="mobile-nav__link" data-i18n="nav.contact">Contact</a>
       </nav>
-      <a href="mailto:booking@kexxy.com" class="mobile-nav__email">booking@kexxy.com</a>
+      <a href="mailto:k3xxy.art@gmail.com" class="mobile-nav__email">k3xxy.art@gmail.com</a>
       <div class="mobile-nav__lang">
         <button class="lang-btn" data-lang="es" title="Español">ES</button>
         <button class="lang-btn" data-lang="en" title="English">EN</button>
@@ -86,7 +87,7 @@
       </p>
 
       <div class="hero__cta">
-        <a href="#music" class="btn btn--primary">
+        <a href="https://soundcloud.com/enzo-diaz-zingaretti" target="_blank" rel="noopener" class="btn btn--primary">
           <span class="btn__inner" data-i18n="hero.cta1">Listen Now</span>
           <span class="btn__glow"></span>
         </a>
@@ -98,18 +99,13 @@
       <!-- Stats strip -->
       <div class="hero__stats">
         <div class="hero__stat">
-          <span class="hero__stat-num">120+</span>
-          <span class="hero__stat-label" data-i18n="hero.stat1">Shows</span>
+          <span class="hero__stat-num">6+</span>
+          <span class="hero__stat-label" data-i18n="hero.stat1">Años de experiencia</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
-          <span class="hero__stat-num">40+</span>
-          <span class="hero__stat-label" data-i18n="hero.stat2">Countries</span>
-        </div>
-        <div class="hero__stat-divider"></div>
-        <div class="hero__stat">
-          <span class="hero__stat-num">2M+</span>
-          <span class="hero__stat-label" data-i18n="hero.stat3">Streams</span>
+          <span class="hero__stat-num">5+</span>
+          <span class="hero__stat-label" data-i18n="hero.stat2">Ciudades</span>
         </div>
       </div>
 
@@ -128,6 +124,25 @@
   </section>
 
   <!-- BIO SECTION -->
+  <!-- LISTEN SECTION -->
+  <section class="listen" id="listen">
+    <div class="listen__inner">
+      <div class="listen__header">
+        <span class="listen__label-line"></span>
+        <span class="listen__label-text">Latest Set</span>
+      </div>
+      <div class="listen__players">
+        <div class="listen__player">
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2074171416&color=%23747474&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+        </div>
+        <div class="listen__player">
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1770277299&color=%23747474&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+        </div>
+      </div>
+      <a href="https://soundcloud.com/enzo-diaz-zingaretti" target="_blank" rel="noopener" class="listen__link">Ver todos los sets en SoundCloud →</a>
+    </div>
+  </section>
+
   <section class="bio" id="bio">
 
     <!-- Decorative top border line -->
@@ -146,11 +161,6 @@
           <!-- Corner brackets brutalist -->
           <span class="bio__corner bio__corner--tl"></span>
           <span class="bio__corner bio__corner--br"></span>
-          <!-- Image caption -->
-          <div class="bio__image-caption">
-            <span class="bio__caption-line"></span>
-            <span class="bio__caption-text">Photography — 2024</span>
-          </div>
         </div>
       </div>
 
@@ -200,8 +210,10 @@
         <div class="bio__tags">
           <span class="bio__tag">Techno</span>
           <span class="bio__tag">Industrial</span>
-          <span class="bio__tag">Dark Ambient</span>
-          <span class="bio__tag">Noise</span>
+          <span class="bio__tag">Schranz</span>
+          <span class="bio__tag">Hardgroove</span>
+          <span class="bio__tag">Raw</span>
+          <span class="bio__tag">Bounce</span>
         </div>
 
       </div>
@@ -290,11 +302,11 @@
           </div>
           <div class="rcard__perf-grid">
             <div class="rcard__perf-item">
-              <span class="rcard__perf-val">2–4h</span>
+              <span class="rcard__perf-val">2–5h</span>
               <span class="rcard__perf-key">Set Duration</span>
             </div>
             <div class="rcard__perf-item">
-              <span class="rcard__perf-val">140–150</span>
+              <span class="rcard__perf-val">145–160</span>
               <span class="rcard__perf-key">BPM Range</span>
             </div>
             <div class="rcard__perf-item">
@@ -325,7 +337,7 @@
             <li class="rcard__item">
               <span class="rcard__item-dot"></span>
               <span class="rcard__item-label">Lighting</span>
-              <span class="rcard__item-value">Dark stage preferred · No strobes</span>
+              <span class="rcard__item-value">Dark stage preferred</span>
             </li>
           </ul>
         </div>
@@ -342,10 +354,10 @@
           <div class="rcard__genres">
             <span class="rcard__genre rcard__genre--primary">Techno</span>
             <span class="rcard__genre">Industrial</span>
-            <span class="rcard__genre">Dark Ambient</span>
-            <span class="rcard__genre">Noise</span>
-            <span class="rcard__genre">EBM</span>
-            <span class="rcard__genre">Hardcore</span>
+            <span class="rcard__genre">Schranz</span>
+            <span class="rcard__genre">Hardgroove</span>
+            <span class="rcard__genre">Raw</span>
+            <span class="rcard__genre">Bounce</span>
           </div>
           <!-- Waveform visual bar -->
           <div class="rcard__waveform" aria-hidden="true">
@@ -354,18 +366,8 @@
           <ul class="rcard__list">
             <li class="rcard__item">
               <span class="rcard__item-dot"></span>
-              <span class="rcard__item-label">Labels</span>
-              <span class="rcard__item-value">Ostgut Ton · Mord · Figure</span>
-            </li>
-            <li class="rcard__item">
-              <span class="rcard__item-dot"></span>
-              <span class="rcard__item-label">Releases</span>
-              <span class="rcard__item-value">3 Albums · 12 EPs</span>
-            </li>
-            <li class="rcard__item">
-              <span class="rcard__item-dot"></span>
-              <span class="rcard__item-label">Radio</span>
-              <span class="rcard__item-value">Boiler Room · RA Exchange · BBC R1</span>
+              <span class="rcard__item-label">Estilos</span>
+              <span class="rcard__item-value">Techno · Industrial · Schranz · Hardgroove · Raw · Bounce</span>
             </li>
           </ul>
         </div>
@@ -383,32 +385,17 @@
             <li class="rcard__item">
               <span class="rcard__item-dot"></span>
               <span class="rcard__item-label">Hotel</span>
-              <span class="rcard__item-value">4★ single room, night of show + 1</span>
+              <span class="rcard__item-value">Single room · Night of show</span>
             </li>
             <li class="rcard__item">
               <span class="rcard__item-dot"></span>
               <span class="rcard__item-label">Travel</span>
-              <span class="rcard__item-value">Business class flights &gt; 3h</span>
-            </li>
-            <li class="rcard__item">
-              <span class="rcard__item-dot"></span>
-              <span class="rcard__item-label">Transfer</span>
-              <span class="rcard__item-value">Private car — airport to venue</span>
-            </li>
-            <li class="rcard__item">
-              <span class="rcard__item-dot"></span>
-              <span class="rcard__item-label">Backstage</span>
-              <span class="rcard__item-value">Private dressing room required</span>
+              <span class="rcard__item-value">To be arranged with management</span>
             </li>
             <li class="rcard__item">
               <span class="rcard__item-dot"></span>
               <span class="rcard__item-label">Catering</span>
-              <span class="rcard__item-value">Hot meal · Water · Rider items TBC</span>
-            </li>
-            <li class="rcard__item">
-              <span class="rcard__item-dot"></span>
-              <span class="rcard__item-label">Guest List</span>
-              <span class="rcard__item-value">4 entries</span>
+              <span class="rcard__item-value">Water · Snacks backstage</span>
             </li>
           </ul>
         </div>
@@ -423,45 +410,45 @@
             <span class="rcard__num">05</span>
           </div>
           <div class="rcard__dl-grid">
-            <a href="#" class="rcard__dl-btn">
+            <a href="https://drive.google.com/file/d/1krLnR1ffF5DVRXeNudcOmFtctoMXhOJu/view?usp=sharing" target="_blank" rel="noopener" class="rcard__dl-btn">
               <span class="rcard__dl-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
               </span>
               <span class="rcard__dl-info">
                 <span class="rcard__dl-name">Full Press Kit</span>
-                <span class="rcard__dl-size">PDF · 4.2 MB</span>
+                <span class="rcard__dl-size">PDF</span>
               </span>
               <span class="rcard__dl-arrow">↓</span>
             </a>
-            <a href="#" class="rcard__dl-btn">
+            <a href="https://drive.google.com/drive/folders/1yhFKDiO74RS4xSVHnlxHs6s2lfzXui1v?usp=sharing" target="_blank" rel="noopener" class="rcard__dl-btn">
               <span class="rcard__dl-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
               </span>
               <span class="rcard__dl-info">
                 <span class="rcard__dl-name">Press Photos</span>
-                <span class="rcard__dl-size">ZIP · 38 MB</span>
+                <span class="rcard__dl-size">Google Drive</span>
               </span>
               <span class="rcard__dl-arrow">↓</span>
             </a>
-            <a href="#" class="rcard__dl-btn">
+            <a href="#rider" class="rcard__dl-btn">
               <span class="rcard__dl-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               </span>
               <span class="rcard__dl-info">
                 <span class="rcard__dl-name">Technical Rider</span>
-                <span class="rcard__dl-size">PDF · 780 KB</span>
+                <span class="rcard__dl-size">Ver en página</span>
               </span>
-              <span class="rcard__dl-arrow">↓</span>
+              <span class="rcard__dl-arrow">↑</span>
             </a>
-            <a href="#" class="rcard__dl-btn">
+            <a href="https://soundcloud.com/enzo-diaz-zingaretti" target="_blank" rel="noopener" class="rcard__dl-btn">
               <span class="rcard__dl-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
               </span>
               <span class="rcard__dl-info">
                 <span class="rcard__dl-name">DJ Mix / Demo</span>
-                <span class="rcard__dl-size">MP3 · 128 MB</span>
+                <span class="rcard__dl-size">SoundCloud</span>
               </span>
-              <span class="rcard__dl-arrow">↓</span>
+              <span class="rcard__dl-arrow">↗</span>
             </a>
           </div>
         </div>
@@ -510,24 +497,19 @@
         <!-- Left: stats column -->
         <div class="live__stats-col reveal-left" style="--delay:.2s">
           <div class="live__stat-card">
-            <span class="live__stat-val">120<span class="live__stat-unit">+</span></span>
-            <span class="live__stat-key" data-i18n="live.stat1">Live Shows</span>
-            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:85%"></div></div>
-          </div>
-          <div class="live__stat-card">
             <span class="live__stat-val">40<span class="live__stat-unit">+</span></span>
-            <span class="live__stat-key" data-i18n="live.stat2">Countries</span>
-            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:70%"></div></div>
+            <span class="live__stat-key" data-i18n="live.stat1">Live Shows</span>
+            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:80%"></div></div>
           </div>
           <div class="live__stat-card">
-            <span class="live__stat-val">8<span class="live__stat-unit">h</span></span>
-            <span class="live__stat-key" data-i18n="live.stat3">Longest Set</span>
+            <span class="live__stat-val">5<span class="live__stat-unit">+</span></span>
+            <span class="live__stat-key" data-i18n="live.stat2">Ciudades</span>
             <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:60%"></div></div>
           </div>
           <div class="live__stat-card">
-            <span class="live__stat-val">5K<span class="live__stat-unit">+</span></span>
-            <span class="live__stat-key" data-i18n="live.stat4">Avg Capacity</span>
-            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:55%"></div></div>
+            <span class="live__stat-val">11<span class="live__stat-unit">h</span></span>
+            <span class="live__stat-key" data-i18n="live.stat3">Longest Set</span>
+            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:100%"></div></div>
           </div>
         </div>
 
@@ -546,11 +528,6 @@
               <span class="live__badge-dot"></span>
               <span class="live__badge-text">Live</span>
             </div>
-            <!-- Caption -->
-            <div class="live__img-caption">
-              <span class="live__img-venue">Tresor, Berlin</span>
-              <span class="live__img-date">Feb 2024</span>
-            </div>
           </div>
         </div>
 
@@ -558,36 +535,40 @@
         <div class="live__fest-col reveal-right" style="--delay:.25s">
           <div class="live__fest-head">
             <span class="live__fest-line"></span>
-            <span class="live__fest-title">Festival Highlights</span>
+            <span class="live__fest-title">Productoras</span>
           </div>
           <ul class="live__fest-list">
             <li class="live__fest-item">
-              <span class="live__fest-name">Movement Detroit</span>
-              <span class="live__fest-meta">2024 · Main Stage</span>
+              <span class="live__fest-name">Underberlin</span>
+              <span class="live__fest-meta">Mendoza</span>
             </li>
             <li class="live__fest-item">
-              <span class="live__fest-name">Awakenings</span>
-              <span class="live__fest-meta">2024 · Gashouder</span>
+              <span class="live__fest-name">Teiko Warehouse</span>
+              <span class="live__fest-meta">Mendoza</span>
             </li>
             <li class="live__fest-item">
-              <span class="live__fest-name">Time Warp</span>
-              <span class="live__fest-meta">2023 · Mannheim</span>
+              <span class="live__fest-name">Sicódromo</span>
+              <span class="live__fest-meta">Mendoza</span>
             </li>
             <li class="live__fest-item">
-              <span class="live__fest-name">Dekmantel</span>
-              <span class="live__fest-meta">2023 · Amsterdam</span>
+              <span class="live__fest-name">Secta Club</span>
+              <span class="live__fest-meta">Mendoza</span>
             </li>
             <li class="live__fest-item">
-              <span class="live__fest-name">Fabric</span>
-              <span class="live__fest-meta">2023 · London · Room 1</span>
+              <span class="live__fest-name">BoingClap</span>
+              <span class="live__fest-meta">Mendoza</span>
             </li>
             <li class="live__fest-item">
-              <span class="live__fest-name">Rex Club</span>
-              <span class="live__fest-meta">2022–24 · Paris</span>
+              <span class="live__fest-name">Fraternity</span>
+              <span class="live__fest-meta">Mendoza</span>
             </li>
-            <li class="live__fest-item live__fest-item--dim">
-              <span class="live__fest-name">+ 100 more venues</span>
-              <span class="live__fest-meta">Worldwide</span>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Vibra Producciones</span>
+              <span class="live__fest-meta">Mendoza</span>
+            </li>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Overkill</span>
+              <span class="live__fest-meta">Buenos Aires</span>
             </li>
           </ul>
         </div>
@@ -602,17 +583,17 @@
           <p class="live__cta-sub" data-i18n="live.ctaSub">Contact management for availability and fees.</p>
         </div>
         <div class="live__cta-actions">
-          <a href="mailto:booking@kexxy.com" class="btn btn--primary">
+          <a href="#contact" class="btn btn--primary">
             <span class="btn__inner" data-i18n="live.ctaBtn">Book a Show</span>
             <span class="btn__glow"></span>
           </a>
-          <a href="#" class="btn btn--secondary">
+          <a href="#rider" class="btn btn--secondary">
             <span class="btn__inner">Download Rider</span>
           </a>
         </div>
         <div class="live__cta-contact">
           <span class="live__cta-contact-label">Bookings</span>
-          <a href="mailto:booking@kexxy.com" class="live__cta-email">booking@kexxy.com</a>
+          <a href="mailto:k3xxy.art@gmail.com" class="live__cta-email">k3xxy.art@gmail.com</a>
         </div>
       </div>
 
@@ -640,35 +621,23 @@
         <div class="contact__info-card">
           <div class="contact__info-label">
             <span class="contact__info-line"></span>
-            <span class="contact__info-text">Management</span>
+            <span class="contact__info-text">Booking &amp; Management</span>
           </div>
-          <p class="contact__info-name">KEXXY Management</p>
-          <a href="mailto:management@kexxy.com" class="contact__info-email">management@kexxy.com</a>
-          <div class="contact__info-divider"></div>
-          <div class="contact__info-label">
-            <span class="contact__info-line"></span>
-            <span class="contact__info-text">Bookings</span>
-          </div>
-          <a href="mailto:booking@kexxy.com" class="contact__info-email">booking@kexxy.com</a>
+          <p class="contact__info-name">KEXXY</p>
+          <a href="mailto:k3xxy.art@gmail.com" class="contact__info-email">k3xxy.art@gmail.com</a>
           <p class="contact__info-phone">Mendoza, Argentina</p>
         </div>
 
         <!-- Social links -->
         <div class="contact__socials">
-          <a href="#" class="contact__social" aria-label="Instagram">
+          <a href="https://www.instagram.com/kexxy.obj" target="_blank" rel="noopener" class="contact__social" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
           </a>
-          <a href="#" class="contact__social" aria-label="SoundCloud">
+          <a href="https://soundcloud.com/enzo-diaz-zingaretti" target="_blank" rel="noopener" class="contact__social" aria-label="SoundCloud">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 16a3 3 0 0 0 3 3h13a4 4 0 0 0 0-8 5 5 0 0 0-9.9-1A3 3 0 0 0 2 13"/></svg>
           </a>
-          <a href="#" class="contact__social" aria-label="Spotify">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 11.5c2.7-.8 5.6-.6 8 .5M7 14.5c3-.9 6.5-.6 9 .5M9 17.5c2-.6 4.5-.4 6.5.5"/></svg>
-          </a>
-          <a href="#" class="contact__social" aria-label="YouTube">
+          <a href="https://www.youtube.com/@Kexxy-obj" target="_blank" rel="noopener" class="contact__social" aria-label="YouTube">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-          </a>
-          <a href="#" class="contact__social" aria-label="Resident Advisor">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h5a3 3 0 0 1 0 6H7V7zm5 6 3 4"/></svg>
           </a>
         </div>
       </div>
@@ -754,6 +723,40 @@
 
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    emailjs.init('D4XtfAiWGEiMSNf0V');
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const inner = btn.querySelector('.btn__inner');
+      const originalText = inner.textContent;
+      inner.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      emailjs.sendForm('service_lkbn9lj', 'template_yqjknhh', this)
+        .then(function() {
+          inner.textContent = '✓ Mensaje enviado';
+          btn.style.background = 'rgba(100,200,100,0.15)';
+          document.getElementById('contactForm').reset();
+          setTimeout(function() {
+            inner.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+          }, 4000);
+        }, function(error) {
+          inner.textContent = '✗ Error al enviar';
+          btn.style.background = 'rgba(200,50,50,0.15)';
+          setTimeout(function() {
+            inner.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+          }, 4000);
+        });
+    });
+    }); // DOMContentLoaded
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

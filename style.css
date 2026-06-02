@@ -1345,7 +1345,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 3rem 1.5rem;
+  padding: 2rem 0 1.5rem;
   width: 100%;
   position: relative;
   gap: 0.75rem;
@@ -1354,7 +1354,7 @@ body {
 
 .rider__diagram-img {
   width: 100%;
-  max-width: 860px;
+  max-width: 100%;
   height: auto;
   max-height: 400px;
   object-fit: contain;
@@ -1837,11 +1837,13 @@ body {
   .rider__diagram-col {
     border-right: none;
     border-bottom: 1px solid rgba(200,200,200,0.08);
-    min-height: 280px;
   }
 
   .rider__diagram-img {
-    max-width: 300px;
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
   }
 
   .rider__cards {

@@ -376,8 +376,8 @@ body {
 
 /* Primary */
 .btn--primary {
-  background: transparent;
-  border: 1px solid rgba(200,200,200,0.6);
+  background: var(--white);
+  border: 1px solid var(--white);
   color: var(--black);
 }
 
@@ -385,6 +385,7 @@ body {
   background: var(--white);
   color: var(--black);
   transition: background 0.35s ease;
+  width: 100%;
 }
 
 .btn--primary .btn__glow {

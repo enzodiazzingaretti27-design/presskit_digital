@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEXXY — Underground Techno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+
+    <!-- Background with parallax -->
+    <div class="hero__bg" id="heroBg"></div>
+
+    <!-- Dark gradient overlay -->
+    <div class="hero__overlay"></div>
+
+    <!-- Particle canvas -->
+    <canvas class="hero__particles" id="particleCanvas"></canvas>
+
+    <!-- Chrome noise texture -->
+    <div class="hero__noise"></div>
+
+    <!-- Top bar -->
+    <header class="hero__header">
+      <div class="hero__logo"><img src="kexxy-logo-black.png" alt="KEXXY" class="hero__logo-img" /></div>
+      <nav class="hero__nav">
+        <a href="#bio" data-i18n="nav.bio">Bio</a>
+        <a href="#rider" data-i18n="nav.rider">Rider</a>
+        <a href="#live" data-i18n="nav.live">Live</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <!-- Language selector -->
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="es" title="Español">ES</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <button class="lang-btn" data-lang="pt" title="Português">PT</button>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="hero__content">
+
+      <div class="hero__tag">
+        <span class="hero__tag-line"></span>
+        <span class="hero__tag-text" data-i18n="hero.tag">Mendoza · Argentina</span>
+      </div>
+
+      <h1 class="hero__name">
+        <span class="hero__name-word" data-text="KEXXY">KEXXY</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        <span data-i18n="hero.subtitle">Techno · Industrial · Dark Electronics</span>
+      </p>
+
+      <p class="hero__desc">
+        <span data-i18n="hero.desc">From the depths of the underground. Raw energy, relentless machines, zero compromise.</span>
+      </p>
+
+      <div class="hero__cta">
+        <a href="#music" class="btn btn--primary">
+          <span class="btn__inner" data-i18n="hero.cta1">Listen Now</span>
+          <span class="btn__glow"></span>
+        </a>
+        <a href="#contact" class="btn btn--secondary">
+          <span class="btn__inner" data-i18n="hero.cta2">Book KEXXY</span>
+        </a>
+      </div>
+
+      <!-- Stats strip -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">120+</span>
+          <span class="hero__stat-label" data-i18n="hero.stat1">Shows</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">40+</span>
+          <span class="hero__stat-label" data-i18n="hero.stat2">Countries</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">2M+</span>
+          <span class="hero__stat-label" data-i18n="hero.stat3">Streams</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" id="scrollIndicator">
+      <div class="hero__scroll-line"></div>
+      <span class="hero__scroll-text">Scroll</span>
+    </div>
+
+    <!-- Chrome accent lines -->
+    <div class="hero__accent hero__accent--left"></div>
+    <div class="hero__accent hero__accent--right"></div>
+
+  </section>
+
+  <!-- BIO SECTION -->
+  <section class="bio" id="bio">
+
+    <!-- Decorative top border line -->
+    <div class="bio__border-top">
+      <div class="bio__border-line bio__border-line--animated"></div>
+    </div>
+
+    <div class="bio__container">
+
+      <!-- Left: image column -->
+      <div class="bio__image-col reveal-left">
+        <div class="bio__image-frame">
+          <div class="bio__image-inner" id="bioImg">
+            <img src="bio-photo.jpg" alt="KEXXY — Artist photo" class="bio__img" />
+          </div>
+          <!-- Corner brackets brutalist -->
+          <span class="bio__corner bio__corner--tl"></span>
+          <span class="bio__corner bio__corner--br"></span>
+          <!-- Image caption -->
+          <div class="bio__image-caption">
+            <span class="bio__caption-line"></span>
+            <span class="bio__caption-text">Photography — 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: text column -->
+      <div class="bio__text-col reveal-right">
+
+        <!-- Section label -->
+        <div class="bio__label">
+          <span class="bio__label-num">01</span>
+          <span class="bio__label-sep"></span>
+          <span class="bio__label-text" data-i18n="bio.label">Biography</span>
+        </div>
+
+        <!-- Section title -->
+        <h2 class="bio__title">
+          <span data-i18n="bio.title">The Sound of Concrete & Steel.</span>
+        </h2>
+
+        <!-- Chrome divider -->
+        <div class="bio__divider">
+          <div class="bio__divider-bar"></div>
+          <div class="bio__divider-dot"></div>
+        </div>
+
+        <!-- Bio body -->
+        <div class="bio__body">
+          <p class="bio__para bio__para--lead">
+            <span data-i18n="bio.p1">KEXXY emerged from Mendoza's underground rave circuit — a raw, unfiltered force built on the philosophy that the floor is the only judge, and the bass is the only truth.</span>
+          </p>
+          <p class="bio__para">
+            <span data-i18n="bio.p2">Blending hardcore techno, industrial noise, and dark electronics, KEXXY's sets are renowned for their relentless intensity and visceral precision. No compromise. No filters. Pure machine logic translated into physical force.</span>
+          </p>
+          <p class="bio__para">
+            <span data-i18n="bio.p3">From underground warehouse raves in Cuyo to international festival stages, KEXXY has cemented a reputation as one of the most uncompromising acts in South America's underground electronics scene. A relentless touring schedule across Argentina and beyond has built a devoted following through nothing but raw energy and a zero-compromise approach to sound.</span>
+          </p>
+        </div>
+
+        <!-- Quote pull -->
+        <blockquote class="bio__quote">
+          <span class="bio__quote-mark">"</span>
+          <span data-i18n="bio.quote">The machine doesn't lie. The machine doesn't perform. The machine simply is.</span>
+          <span class="bio__quote-mark">"</span>
+          <cite class="bio__cite" data-i18n="bio.cite">— Resident Advisor, 2023</cite>
+        </blockquote>
+
+        <!-- Tag strip -->
+        <div class="bio__tags">
+          <span class="bio__tag">Techno</span>
+          <span class="bio__tag">Industrial</span>
+          <span class="bio__tag">Dark Ambient</span>
+          <span class="bio__tag">Noise</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Decorative bottom border -->
+    <div class="bio__border-bottom">
+      <div class="bio__border-line bio__border-line--animated bio__border-line--delay"></div>
+    </div>
+
+  </section>
+
+  <!-- RIDER / PROFILE SECTION -->
+  <section class="rider" id="rider">
+
+    <!-- Background visual -->
+    <div class="rider__bg" id="riderBg"></div>
+    <div class="rider__bg-overlay"></div>
+
+    <div class="rider__inner">
+
+      <!-- Section header -->
+      <div class="rider__header reveal-up">
+        <div class="rider__header-label">
+          <span class="rider__label-num">02</span>
+          <span class="rider__label-sep"></span>
+          <span class="rider__label-text">Technical Rider &amp; Profile</span>
+        </div>
+        <h2 class="rider__title"><span data-i18n="rider.title">Artist Specifications</span></h2>
+        <p class="rider__subtitle" data-i18n="rider.subtitle">Everything a promoter or booker needs to know.</p>
+      </div>
+
+      <!-- Main dashboard grid -->
+      <div class="rider__grid">
+
+        <!-- Diagram — standalone left column -->
+        <div class="rider__diagram-col reveal-left">
+          <div class="rider__diagram-inner">
+            <img src="rider-diagram.png" alt="DJ Setup Diagram" class="rider__diagram-img" />
+            <div class="rider__diagram-caption">
+              <span class="rider__diagram-line"></span>
+              <span class="rider__diagram-text">Technical Setup — 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards wrapper -->
+        <div class="rider__cards">
+
+        <!-- Card 1: Equipment -->
+        <div class="rcard rcard--equipment reveal-up" style="--delay:.05s">
+          <div class="rcard__head">
+            <span class="rcard__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+            </span>
+            <span class="rcard__label">Equipment</span>
+            <span class="rcard__num">01</span>
+          </div>
+          <ul class="rcard__list">
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">CDJ Setup</span>
+              <span class="rcard__item-value">4× Pioneer CDJ-2000NXS2 / 3000</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Mixer</span>
+              <span class="rcard__item-value">Pioneer V10 · Allen &amp; Heath Xone 96/92</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Monitoring</span>
+              <span class="rcard__item-value">Sound System Sub + 2 MIDI/Hi Speakers</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Performance Info -->
+        <div class="rcard rcard--performance reveal-up" style="--delay:.15s">
+          <div class="rcard__head">
+            <span class="rcard__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </span>
+            <span class="rcard__label">Performance</span>
+            <span class="rcard__num">02</span>
+          </div>
+          <div class="rcard__perf-grid">
+            <div class="rcard__perf-item">
+              <span class="rcard__perf-val">2–4h</span>
+              <span class="rcard__perf-key">Set Duration</span>
+            </div>
+            <div class="rcard__perf-item">
+              <span class="rcard__perf-val">140–150</span>
+              <span class="rcard__perf-key">BPM Range</span>
+            </div>
+            <div class="rcard__perf-item">
+              <span class="rcard__perf-val">DJ Set</span>
+              <span class="rcard__perf-key">Format</span>
+            </div>
+            <div class="rcard__perf-item">
+              <span class="rcard__perf-val">USB</span>
+              <span class="rcard__perf-key">Media</span>
+            </div>
+          </div>
+          <ul class="rcard__list rcard__list--mt">
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Formats Accepted</span>
+              <span class="rcard__item-value">WAV · AIFF · MP3 320kbps</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Stage Sharing</span>
+              <span class="rcard__item-value">No B2B unless pre-arranged</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Soundcheck</span>
+              <span class="rcard__item-value">Required · Min 45 min prior</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Lighting</span>
+              <span class="rcard__item-value">Dark stage preferred · No strobes</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Music Profile -->
+        <div class="rcard rcard--music reveal-up" style="--delay:.25s">
+          <div class="rcard__head">
+            <span class="rcard__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </span>
+            <span class="rcard__label">Music Profile</span>
+            <span class="rcard__num">03</span>
+          </div>
+          <div class="rcard__genres">
+            <span class="rcard__genre rcard__genre--primary">Techno</span>
+            <span class="rcard__genre">Industrial</span>
+            <span class="rcard__genre">Dark Ambient</span>
+            <span class="rcard__genre">Noise</span>
+            <span class="rcard__genre">EBM</span>
+            <span class="rcard__genre">Hardcore</span>
+          </div>
+          <!-- Waveform visual bar -->
+          <div class="rcard__waveform" aria-hidden="true">
+            <div class="rcard__wave-bars" id="waveBars"></div>
+          </div>
+          <ul class="rcard__list">
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Labels</span>
+              <span class="rcard__item-value">Ostgut Ton · Mord · Figure</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Releases</span>
+              <span class="rcard__item-value">3 Albums · 12 EPs</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Radio</span>
+              <span class="rcard__item-value">Boiler Room · RA Exchange · BBC R1</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Hospitality -->
+        <div class="rcard rcard--hospitality reveal-up" style="--delay:.35s">
+          <div class="rcard__head">
+            <span class="rcard__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </span>
+            <span class="rcard__label">Hospitality</span>
+            <span class="rcard__num">04</span>
+          </div>
+          <ul class="rcard__list rcard__list--full">
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Hotel</span>
+              <span class="rcard__item-value">4★ single room, night of show + 1</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Travel</span>
+              <span class="rcard__item-value">Business class flights &gt; 3h</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Transfer</span>
+              <span class="rcard__item-value">Private car — airport to venue</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Backstage</span>
+              <span class="rcard__item-value">Private dressing room required</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Catering</span>
+              <span class="rcard__item-value">Hot meal · Water · Rider items TBC</span>
+            </li>
+            <li class="rcard__item">
+              <span class="rcard__item-dot"></span>
+              <span class="rcard__item-label">Guest List</span>
+              <span class="rcard__item-value">4 entries</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Download area — full width -->
+        <div class="rcard rcard--downloads reveal-up" style="--delay:.45s">
+          <div class="rcard__head">
+            <span class="rcard__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </span>
+            <span class="rcard__label">Press Downloads</span>
+            <span class="rcard__num">05</span>
+          </div>
+          <div class="rcard__dl-grid">
+            <a href="#" class="rcard__dl-btn">
+              <span class="rcard__dl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </span>
+              <span class="rcard__dl-info">
+                <span class="rcard__dl-name">Full Press Kit</span>
+                <span class="rcard__dl-size">PDF · 4.2 MB</span>
+              </span>
+              <span class="rcard__dl-arrow">↓</span>
+            </a>
+            <a href="#" class="rcard__dl-btn">
+              <span class="rcard__dl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </span>
+              <span class="rcard__dl-info">
+                <span class="rcard__dl-name">Press Photos</span>
+                <span class="rcard__dl-size">ZIP · 38 MB</span>
+              </span>
+              <span class="rcard__dl-arrow">↓</span>
+            </a>
+            <a href="#" class="rcard__dl-btn">
+              <span class="rcard__dl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </span>
+              <span class="rcard__dl-info">
+                <span class="rcard__dl-name">Technical Rider</span>
+                <span class="rcard__dl-size">PDF · 780 KB</span>
+              </span>
+              <span class="rcard__dl-arrow">↓</span>
+            </a>
+            <a href="#" class="rcard__dl-btn">
+              <span class="rcard__dl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </span>
+              <span class="rcard__dl-info">
+                <span class="rcard__dl-name">DJ Mix / Demo</span>
+                <span class="rcard__dl-size">MP3 · 128 MB</span>
+              </span>
+              <span class="rcard__dl-arrow">↓</span>
+            </a>
+          </div>
+        </div>
+
+        </div>
+        <!-- /cards wrapper -->
+
+      </div>
+      <!-- /grid -->
+
+    </div>
+  </section>
+
+  <!-- LIVE PERFORMANCE SECTION -->
+  <section class="live" id="live">
+
+    <!-- Cinematic background -->
+    <div class="live__bg" id="liveBg"></div>
+    <div class="live__overlay"></div>
+    <div class="live__noise"></div>
+
+    <!-- Scanline FX -->
+    <div class="live__scanlines" aria-hidden="true"></div>
+
+    <div class="live__inner">
+
+      <!-- Top label row -->
+      <div class="live__label reveal-up">
+        <span class="live__label-num">03</span>
+        <span class="live__label-sep"></span>
+        <span class="live__label-text" data-i18n="live.label">Live Performance</span>
+        <span class="live__label-sep"></span>
+        <span class="live__status"><span class="live__status-dot"></span><span data-i18n="live.status">Available for booking</span></span>
+      </div>
+
+      <!-- Main title -->
+      <h2 class="live__title reveal-up" style="--delay:.1s">
+        <span class="live__title-sm">The</span><br />
+        Raw<br />
+        <span class="live__title-outline">Energy</span>
+      </h2>
+
+      <!-- Asymmetric content grid -->
+      <div class="live__content">
+
+        <!-- Left: stats column -->
+        <div class="live__stats-col reveal-left" style="--delay:.2s">
+          <div class="live__stat-card">
+            <span class="live__stat-val">120<span class="live__stat-unit">+</span></span>
+            <span class="live__stat-key" data-i18n="live.stat1">Live Shows</span>
+            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:85%"></div></div>
+          </div>
+          <div class="live__stat-card">
+            <span class="live__stat-val">40<span class="live__stat-unit">+</span></span>
+            <span class="live__stat-key" data-i18n="live.stat2">Countries</span>
+            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:70%"></div></div>
+          </div>
+          <div class="live__stat-card">
+            <span class="live__stat-val">8<span class="live__stat-unit">h</span></span>
+            <span class="live__stat-key" data-i18n="live.stat3">Longest Set</span>
+            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:60%"></div></div>
+          </div>
+          <div class="live__stat-card">
+            <span class="live__stat-val">5K<span class="live__stat-unit">+</span></span>
+            <span class="live__stat-key" data-i18n="live.stat4">Avg Capacity</span>
+            <div class="live__stat-bar"><div class="live__stat-fill" style="--fill:55%"></div></div>
+          </div>
+        </div>
+
+        <!-- Center: image frame -->
+        <div class="live__image-col reveal-up" style="--delay:.15s">
+          <div class="live__image-frame">
+            <img src="live-photo.jpg" alt="KEXXY Live" class="live__img" />
+            <div class="live__img-overlay"></div>
+            <!-- Corner brackets -->
+            <span class="live__corner live__corner--tl"></span>
+            <span class="live__corner live__corner--tr"></span>
+            <span class="live__corner live__corner--bl"></span>
+            <span class="live__corner live__corner--br"></span>
+            <!-- Live badge -->
+            <div class="live__badge">
+              <span class="live__badge-dot"></span>
+              <span class="live__badge-text">Live</span>
+            </div>
+            <!-- Caption -->
+            <div class="live__img-caption">
+              <span class="live__img-venue">Tresor, Berlin</span>
+              <span class="live__img-date">Feb 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: festivals column -->
+        <div class="live__fest-col reveal-right" style="--delay:.25s">
+          <div class="live__fest-head">
+            <span class="live__fest-line"></span>
+            <span class="live__fest-title">Festival Highlights</span>
+          </div>
+          <ul class="live__fest-list">
+            <li class="live__fest-item">
+              <span class="live__fest-name">Movement Detroit</span>
+              <span class="live__fest-meta">2024 · Main Stage</span>
+            </li>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Awakenings</span>
+              <span class="live__fest-meta">2024 · Gashouder</span>
+            </li>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Time Warp</span>
+              <span class="live__fest-meta">2023 · Mannheim</span>
+            </li>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Dekmantel</span>
+              <span class="live__fest-meta">2023 · Amsterdam</span>
+            </li>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Fabric</span>
+              <span class="live__fest-meta">2023 · London · Room 1</span>
+            </li>
+            <li class="live__fest-item">
+              <span class="live__fest-name">Rex Club</span>
+              <span class="live__fest-meta">2022–24 · Paris</span>
+            </li>
+            <li class="live__fest-item live__fest-item--dim">
+              <span class="live__fest-name">+ 100 more venues</span>
+              <span class="live__fest-meta">Worldwide</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- /content grid -->
+
+      <!-- Bottom CTA bar -->
+      <div class="live__cta-bar reveal-up" style="--delay:.4s">
+        <div class="live__cta-text">
+          <p class="live__cta-label" data-i18n="live.ctaLabel">Ready to book?</p>
+          <p class="live__cta-sub" data-i18n="live.ctaSub">Contact management for availability and fees.</p>
+        </div>
+        <div class="live__cta-actions">
+          <a href="mailto:booking@kexxy.com" class="btn btn--primary">
+            <span class="btn__inner" data-i18n="live.ctaBtn">Book a Show</span>
+            <span class="btn__glow"></span>
+          </a>
+          <a href="#" class="btn btn--secondary">
+            <span class="btn__inner">Download Rider</span>
+          </a>
+        </div>
+        <div class="live__cta-contact">
+          <span class="live__cta-contact-label">Bookings</span>
+          <a href="mailto:booking@kexxy.com" class="live__cta-email">booking@kexxy.com</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & BOOKING SECTION -->
+  <section class="contact" id="contact">
+
+    <div class="contact__grid">
+
+      <!-- Left: image panel -->
+      <div class="contact__image-panel reveal-left">
+        <div class="contact__image-wrap" id="contactImgWrap">
+          <img src="contact-photo.jpg" alt="KEXXY" class="contact__img" id="contactImg" />
+          <div class="contact__img-overlay"></div>
+        </div>
+
+        <!-- Large logo overlay -->
+        <div class="contact__logo-big">
+          <img src="kexxy-logo-black.png" alt="KEXXY" class="contact__logo-img" />
+        </div>
+
+        <!-- Floating info card -->
+        <div class="contact__info-card">
+          <div class="contact__info-label">
+            <span class="contact__info-line"></span>
+            <span class="contact__info-text">Management</span>
+          </div>
+          <p class="contact__info-name">KEXXY Management</p>
+          <a href="mailto:management@kexxy.com" class="contact__info-email">management@kexxy.com</a>
+          <div class="contact__info-divider"></div>
+          <div class="contact__info-label">
+            <span class="contact__info-line"></span>
+            <span class="contact__info-text">Bookings</span>
+          </div>
+          <a href="mailto:booking@kexxy.com" class="contact__info-email">booking@kexxy.com</a>
+          <p class="contact__info-phone">Mendoza, Argentina</p>
+        </div>
+
+        <!-- Social links -->
+        <div class="contact__socials">
+          <a href="#" class="contact__social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="contact__social" aria-label="SoundCloud">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 16a3 3 0 0 0 3 3h13a4 4 0 0 0 0-8 5 5 0 0 0-9.9-1A3 3 0 0 0 2 13"/></svg>
+          </a>
+          <a href="#" class="contact__social" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 11.5c2.7-.8 5.6-.6 8 .5M7 14.5c3-.9 6.5-.6 9 .5M9 17.5c2-.6 4.5-.4 6.5.5"/></svg>
+          </a>
+          <a href="#" class="contact__social" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="contact__social" aria-label="Resident Advisor">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h5a3 3 0 0 1 0 6H7V7zm5 6 3 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: form panel -->
+      <div class="contact__form-panel reveal-right">
+
+        <!-- Section header -->
+        <div class="contact__header">
+          <div class="contact__header-label">
+            <span class="contact__label-num">04</span>
+            <span class="contact__label-sep"></span>
+            <span class="contact__label-text" data-i18n="contact.label">Contact &amp; Booking</span>
+          </div>
+          <h2 class="contact__title">Let's<br /><span class="contact__title-outline">Connect.</span></h2>
+          <p class="contact__subtitle" data-i18n="contact.subtitle">
+            For bookings, press inquiries, and collaborations — reach out directly or use the form below.
+          </p>
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact__form" id="contactForm" novalidate>
+
+          <div class="contact__form-row">
+            <div class="contact__field">
+              <label class="contact__field-label" for="cf-name" data-i18n="contact.fieldName">Name</label>
+              <input class="contact__input" type="text" id="cf-name" name="name" data-i18n-placeholder="contact.placeholderName" placeholder="Your name" autocomplete="name" />
+            </div>
+            <div class="contact__field">
+              <label class="contact__field-label" for="cf-email" data-i18n="contact.fieldEmail">Email</label>
+              <input class="contact__input" type="email" id="cf-email" name="email" placeholder="your@email.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__field-label" for="cf-subject" data-i18n="contact.fieldSubject">Inquiry Type</label>
+            <select class="contact__input contact__select" id="cf-subject" name="subject">
+              <option value="" disabled selected data-i18n="contact.optDefault">Select inquiry type</option>
+              <option value="booking" data-i18n="contact.optBooking">Booking Request</option>
+              <option value="press" data-i18n="contact.optPress">Press / Media</option>
+              <option value="collab" data-i18n="contact.optCollab">Collaboration</option>
+              <option value="other" data-i18n="contact.optOther">Other</option>
+            </select>
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__field-label" for="cf-venue">Venue / Event (optional)</label>
+            <input class="contact__input" type="text" id="cf-venue" name="venue" placeholder="Venue name, city, date" />
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__field-label" for="cf-message" data-i18n="contact.fieldMsg">Message</label>
+            <textarea class="contact__input contact__textarea" id="cf-message" name="message" data-i18n-placeholder="contact.placeholderMsg" placeholder="Tell us about the event, expected attendance, lineup context..." rows="5"></textarea>
+          </div>
+
+          <div class="contact__form-footer">
+            <p class="contact__form-note" data-i18n="contact.formNote">We typically respond within 48 hours.</p>
+            <button type="submit" class="btn btn--primary contact__submit">
+              <span class="btn__inner" data-i18n="contact.send">Send Message</span>
+              <span class="btn__glow"></span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Footer bar -->
+    <footer class="contact__footer">
+      <div class="contact__footer-inner">
+        <div class="contact__footer-logo">KEXXY</div>
+        <p class="contact__footer-copy" data-i18n="footer.copy">© 2024 KEXXY. All rights reserved. Unauthorized use prohibited.</p>
+        <div class="contact__footer-links">
+          <a href="#">Privacy</a>
+          <span>·</span>
+          <a href="#">Press Kit</a>
+          <span>·</span>
+          <a href="#">EPK</a>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

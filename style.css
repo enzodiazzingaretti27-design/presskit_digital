@@ -382,7 +382,7 @@ body {
 }
 
 .btn--primary .btn__inner {
-  background: var(--chrome-hi);
+  background: var(--white);
   color: var(--black);
   transition: background 0.35s ease;
 }

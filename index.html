@@ -28,7 +28,9 @@
 
     <!-- Top bar -->
     <header class="hero__header">
-      <div class="hero__logo"><img src="kexxy-logo-black.png" alt="KEXXY" class="hero__logo-img" /></div>
+      <div class="hero__logo" id="menuToggle" role="button" aria-label="Open menu" tabindex="0">
+        <img src="kexxy-logo-black.png" alt="KEXXY" class="hero__logo-img" />
+      </div>
       <nav class="hero__nav">
         <a href="#bio" data-i18n="nav.bio">Bio</a>
         <a href="#rider" data-i18n="nav.rider">Rider</a>
@@ -43,6 +45,25 @@
         <button class="lang-btn" data-lang="pt" title="Português">PT</button>
       </div>
     </header>
+
+    <!-- Mobile fullscreen nav overlay -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <button class="mobile-nav__close" id="menuClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <nav class="mobile-nav__links">
+        <a href="#bio" class="mobile-nav__link" data-i18n="nav.bio">Bio</a>
+        <a href="#rider" class="mobile-nav__link" data-i18n="nav.rider">Rider</a>
+        <a href="#live" class="mobile-nav__link" data-i18n="nav.live">Live</a>
+        <a href="#contact" class="mobile-nav__link" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <a href="mailto:booking@kexxy.com" class="mobile-nav__email">booking@kexxy.com</a>
+      <div class="mobile-nav__lang">
+        <button class="lang-btn" data-lang="es" title="Español">ES</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <button class="lang-btn" data-lang="pt" title="Português">PT</button>
+      </div>
+    </div>
 
     <!-- Main content -->
     <div class="hero__content">

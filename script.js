@@ -318,6 +318,40 @@ if (scrollIndicator) {
 })();
 
 /* ============================================================
+   MOBILE NAV — toggle on logo click
+   ============================================================ */
+(function mobileNav() {
+  const toggle = document.getElementById('menuToggle');
+  const nav    = document.getElementById('mobileNav');
+  const close  = document.getElementById('menuClose');
+  if (!toggle || !nav) return;
+
+  function openNav() {
+    nav.classList.add('is-open');
+    nav.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNav() {
+    nav.classList.remove('is-open');
+    nav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', openNav);
+  toggle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openNav(); });
+  close.addEventListener('click', closeNav);
+
+  nav.querySelectorAll('.mobile-nav__link').forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeNav();
+  });
+})();
+
+/* ============================================================
    I18N — Translations & Language Switcher
    ============================================================ */
 (function i18n() {

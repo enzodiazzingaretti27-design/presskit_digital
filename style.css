@@ -910,7 +910,7 @@ body {
    ============================================================ */
 .dates {
   background: var(--black);
-  padding: 4rem 0;
+  padding: 5rem 0;
   border-top: 1px solid rgba(200,200,200,0.08);
   border-bottom: 1px solid rgba(200,200,200,0.08);
 }
@@ -953,12 +953,12 @@ body {
 
 .dates__row {
   display: grid;
-  grid-template-columns: 130px 1fr 1fr auto;
+  grid-template-columns: 140px 180px 1fr auto;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 2rem;
+  padding: 1.1rem 0;
   border-bottom: 1px solid rgba(200,200,200,0.07);
-  transition: background 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .dates__row:first-child {
@@ -988,11 +988,11 @@ body {
 
 .dates__venue {
   font-family: var(--font-display);
-  font-weight: 300;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--chrome-hi);
+  color: var(--chrome-hi) !important;
 }
 
 .dates__status {

@@ -1,4 +1,44 @@
 /* ============================================================
+   DATES — auto mark past shows
+   ============================================================ */
+(function initDates() {
+  const MONTH_MAP = {
+    enero:0, ene:0, febrero:1, feb:1, marzo:2, mar:2,
+    abril:3, abr:3, mayo:4, junio:5, jun:5,
+    julio:6, jul:6, agosto:7, ago:7, septiembre:8, sep:8,
+    octubre:9, oct:9, noviembre:10, nov:10, diciembre:11, dic:11
+  };
+
+  function parseDate(raw) {
+    const text = String(raw).trim().toLowerCase();
+    const m = text.match(/^(\d{1,2})\s+([a-záéíóúüñ]+)\s+(\d{4})$/i);
+    if (!m) return null;
+    const day = Number(m[1]);
+    const month = MONTH_MAP[m[2].normalize('NFD').replace(/[\u0300-\u036f]/g,'')];
+    const year = Number(m[3]);
+    if (month === undefined) return null;
+    return new Date(year, month, day, 12, 0, 0);
+  }
+
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  document.querySelectorAll('.dates__row').forEach(row => {
+    const raw = row.dataset.date;
+    const parsed = parseDate(raw);
+    const statusEl = row.querySelector('.dates__status');
+    if (parsed && parsed.getTime() < today.getTime()) {
+      row.classList.add('dates__row--past');
+      if (statusEl) {
+        statusEl.textContent = 'Past';
+        statusEl.classList.remove('dates__status--upcoming');
+        statusEl.classList.add('dates__status--past');
+      }
+    }
+  });
+})();
+
+/* ============================================================
    PARALLAX
    ============================================================ */
 const heroBg = document.getElementById('heroBg');
@@ -359,9 +399,11 @@ if (scrollIndicator) {
   const translations = {
     en: {
       'nav.bio':        'Bio',
+      'nav.dates':      'Dates',
       'nav.rider':      'Rider',
       'nav.live':       'Live',
       'nav.contact':    'Contact',
+      'dates.label':    'Upcoming Shows',
       'hero.tag':       'Mendoza · Argentina',
       'hero.subtitle':  'Techno · Schranz · Industrial',
       'hero.desc':      'Underground DJ from Argentina. Raw sound, fast mixing, dense layers.',
@@ -408,9 +450,11 @@ if (scrollIndicator) {
     },
     es: {
       'nav.bio':        'Bio',
+      'nav.dates':      'Fechas',
       'nav.rider':      'Rider',
       'nav.live':       'En Vivo',
       'nav.contact':    'Contacto',
+      'dates.label':    'Próximas Fechas',
       'hero.tag':       'Mendoza · Argentina',
       'hero.subtitle':  'Techno · Schranz · Industrial',
       'hero.desc':      'DJ underground de Argentina. Sonido crudo, mezclas rápidas, capas densas.',
@@ -457,9 +501,11 @@ if (scrollIndicator) {
     },
     pt: {
       'nav.bio':        'Bio',
+      'nav.dates':      'Datas',
       'nav.rider':      'Rider',
       'nav.live':       'Ao Vivo',
       'nav.contact':    'Contato',
+      'dates.label':    'Próximas Datas',
       'hero.tag':       'Mendoza · Argentina',
       'hero.subtitle':  'Techno · Schranz · Industrial',
       'hero.desc':      'DJ underground da Argentina. Som cru, mixagens rápidas, camadas densas.',

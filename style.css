@@ -906,6 +906,150 @@ body {
 }
 
 /* ============================================================
+   DATES SECTION
+   ============================================================ */
+.dates {
+  background: var(--black);
+  padding: 4rem 0;
+  border-top: 1px solid rgba(200,200,200,0.08);
+  border-bottom: 1px solid rgba(200,200,200,0.08);
+}
+
+.dates__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dates__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dates__label-line {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--chrome-dim);
+}
+
+.dates__label-text {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--chrome-dim);
+}
+
+.dates__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dates__row {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(200,200,200,0.07);
+  transition: background 0.2s ease;
+}
+
+.dates__row:first-child {
+  border-top: 1px solid rgba(200,200,200,0.07);
+}
+
+.dates__row--past {
+  opacity: 0.35;
+}
+
+.dates__date {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--chrome-hi);
+}
+
+.dates__city {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--chrome-dim);
+}
+
+.dates__venue {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--chrome-hi);
+}
+
+.dates__status {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid;
+}
+
+.dates__status--upcoming {
+  color: rgba(200,255,200,0.7);
+  border-color: rgba(200,255,200,0.2);
+}
+
+.dates__status--past {
+  color: var(--chrome-dim);
+  border-color: rgba(200,200,200,0.12);
+}
+
+@media (max-width: 768px) {
+  .dates__inner {
+    padding: 0 1.5rem;
+  }
+
+  .dates__row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.4rem;
+    padding: 0.9rem 0;
+  }
+
+  .dates__date {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .dates__status {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .dates__venue {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .dates__city {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+}
+
+/* ============================================================
    BIO SECTION
    ============================================================ */
 .bio {
